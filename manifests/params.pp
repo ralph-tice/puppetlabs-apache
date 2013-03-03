@@ -31,7 +31,7 @@ class apache::params {
   $override      = 'None'
   $vhost_name    = '*'
   
-  if $::osfamily == 'redhat' or $::operatingsystem == 'amazon' {
+  if $::osfamily == 'redhat' or $::operatingsystem == 'amazon' or $::operatingsystem == 'Darwin' {
     $user                  = 'apache'
     $group                 = 'apache'
     $apache_name           = 'httpd'
